@@ -2,25 +2,27 @@
 
 URL="https://raw.githubusercontent.com/socioambiental/domains/main/webapps.txt"
 
-curl -s "$URL" | awk -F',' '
-BEGIN { print "{ \"data\": [" }
-{
-    app=$1
-    domain=$2
-    has_dev=$3
+echo '{ "data": ['
 
+first=1
+
+while IFS=',' read -r app domain has_dev; do
     # limpa espaços
-    gsub(/^[ \t]+|[ \t]+$/, "", app)
-    gsub(/^[ \t]+|[ \t]+$/, "", domain)
-    gsub(/^[ \t]+|[ \t]+$/, "", has_dev)
+    app=$(echo "$app" | xargs)
+    domain=$(echo "$domain" | xargs)
+    has_dev=$(echo "$has_dev" | xargs)
 
-    # PROD sempre existe
-    printf "{ \"{#APP}\": \"%s\", \"{#ENV}\": \"prod\", \"{#DOMAIN}\": \"%s\", \"{#HOST}\": \"%s\" },\n", app, domain, app
+    # PROD
+    if [ $first -eq 0 ]; then echo ","; fi
+    echo -n "{ \"{#APP}\": \"$app\", \"{#ENV}\": \"prod\", \"{#DOMAIN}\": \"$domain\", \"{#HOST}\": \"$app\" }"
+    first=0
 
-    # DEV só se flag = 1
-    if (has_dev == "1") {
-        printf "{ \"{#APP}\": \"%s\", \"{#ENV}\": \"dev\", \"{#DOMAIN}\": \"%s\", \"{#HOST}\": \"%s-dev\" },\n", app, domain, app
-    }
-}
-END { print "]}" }
-' | sed '$ s/},/}/'
+    # DEV (se flag)
+    if [ "$has_dev" = "1" ]; then
+        echo ","
+        echo -n "{ \"{#APP}\": \"$app\", \"{#ENV}\": \"dev\", \"{#DOMAIN}\": \"$domain\", \"{#HOST}\": \"$app-dev\" }"
+    fi
+
+done < <(curl -s "$URL")
+
+echo '] }'
