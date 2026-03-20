@@ -1,27 +1,26 @@
 #!/bin/bash
 
-FILE="./webapps.txt"
+URL="https://raw.githubusercontent.com/socioambiental/domains/main/webapps.txt"
 
-echo '{ "data": ['
+curl -s "$URL" | awk -F',' '
+BEGIN { print "{ \"data\": [" }
+{
+    app=$1
+    domain=$2
+    has_dev=$3
 
-FIRST=1
+    # limpa espaços
+    gsub(/^[ \t]+|[ \t]+$/, "", app)
+    gsub(/^[ \t]+|[ \t]+$/, "", domain)
+    gsub(/^[ \t]+|[ \t]+$/, "", has_dev)
 
-while IFS=',' read -r app env timeout; do
-    # ignora linhas vazias ou comentários
-    [[ -z "$app" || "$app" =~ ^# ]] && continue
+    # PROD sempre existe
+    printf "{ \"{#APP}\": \"%s\", \"{#ENV}\": \"prod\", \"{#DOMAIN}\": \"%s\", \"{#HOST}\": \"%s\" },\n", app, domain, app
 
-    # defaults
-    [ -z "$env" ] && env="prod"
-    [ -z "$timeout" ] && timeout="3"
-
-    if [ $FIRST -eq 0 ]; then
-        echo ","
-    fi
-
-    echo -n "  { \"{#APP}\": \"$app\", \"{#ENV}\": \"$env\", \"{#TIMEOUT}\": \"$timeout\" }"
-
-    FIRST=0
-done < $FILE
-
-echo
-echo "]}"
+    # DEV só se flag = 1
+    if (has_dev == "1") {
+        printf "{ \"{#APP}\": \"%s\", \"{#ENV}\": \"dev\", \"{#DOMAIN}\": \"%s\", \"{#HOST}\": \"%s-dev\" },\n", app, domain, app
+    }
+}
+END { print "]}" }
+' | sed '$ s/},/}/'
