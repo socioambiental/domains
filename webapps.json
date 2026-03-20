@@ -14,4 +14,5 @@
 { "{#APP}": "mapa", "{#ENV}": "prod", "{#DOMAIN}": "socioambiental.org", "{#HOST}": "mapa" },
 { "{#APP}": "odk", "{#ENV}": "prod", "{#DOMAIN}": "socioambiental.org", "{#HOST}": "odk" },
 { "{#APP}": "widgets", "{#ENV}": "prod", "{#DOMAIN}": "socioambiental.org", "{#HOST}": "widgets" },
+{ "{#APP}": "apiadmin", "{#ENV}": "prod", "{#DOMAIN}": "socioambiental.org", "{#HOST}": "apiadmin" },
 { "{#APP}": "www", "{#ENV}": "prod", "{#DOMAIN}": "raisg.org", "{#HOST}": "www" }] }
