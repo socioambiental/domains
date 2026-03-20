@@ -1,6 +1,6 @@
 #!/bin/bash
 
-URL="https://raw.githubusercontent.com/socioambiental/domains/main/webapps.txt"
+URL="https://raw.githubusercontent.com/socioambiental/domains/main/webapps.txt?nocache=$(date +%s)"
 
 echo '{ "data": ['
 
