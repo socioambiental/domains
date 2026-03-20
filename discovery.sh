@@ -9,12 +9,10 @@ first=1
 
 curl -s "$URL" | sed '/^\s*$/d' | while IFS=',' read -r app domain has_dev || [ -n "$app" ]; do
 
-    # ignora comentário
     case "$app" in
         \#*) continue ;;
     esac
 
-    # trim
     app=$(echo "$app" | xargs)
     domain=$(echo "$domain" | xargs)
     has_dev=$(echo "$has_dev" | xargs)
@@ -23,8 +21,10 @@ curl -s "$URL" | sed '/^\s*$/d' | while IFS=',' read -r app domain has_dev || [ 
     [ -z "$domain" ] && continue
     [ -z "$has_dev" ] && has_dev="0"
 
-    # 🔥 extrai domínio base automaticamente
-    if [[ "$domain" == *.* ]]; then
+    # 🔥 correção definitiva do domínio
+    dot_count=$(echo "$domain" | awk -F'.' '{print NF-1}')
+
+    if [ "$dot_count" -ge 2 ]; then
         domain_base=$(echo "$domain" | cut -d'.' -f2-)
     else
         domain_base="$domain"
