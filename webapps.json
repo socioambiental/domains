@@ -1,17 +1,100 @@
-{ "data": [
-{ "{#APP}": "www", "{#ENV}": "prod", "{#DOMAIN}": "socioambiental.org", "{#HOST}": "www" },
-{ "{#APP}": "pib", "{#ENV}": "prod", "{#DOMAIN}": "socioambiental.org", "{#HOST}": "pib" },
-{ "{#APP}": "ti", "{#ENV}": "prod", "{#DOMAIN}": "ti.socioambiental.org", "{#HOST}": "ti" },
-{ "{#APP}": "uc", "{#ENV}": "prod", "{#DOMAIN}": "uc.socioambiental.org", "{#HOST}": "uc" },
-{ "{#APP}": "mirim", "{#ENV}": "prod", "{#DOMAIN}": "mirim.socioambiental.org", "{#HOST}": "mirim" },
-{ "{#APP}": "apoie", "{#ENV}": "prod", "{#DOMAIN}": "apoie.socioambiental.org", "{#HOST}": "apoie" },
-{ "{#APP}": "acervo", "{#ENV}": "prod", "{#DOMAIN}": "acervo.socioambiental.org", "{#HOST}": "acervo" },
-{ "{#APP}": "sisarp", "{#ENV}": "prod", "{#DOMAIN}": "sisarp.socioambiental.org", "{#HOST}": "sisarp" },
-{ "{#APP}": "sisarp-v2", "{#ENV}": "prod", "{#DOMAIN}": "sisarp-v2.socioambiental.org", "{#HOST}": "sisarp-v2" },
-{ "{#APP}": "loja", "{#ENV}": "prod", "{#DOMAIN}": "loja.socioambiental.org", "{#HOST}": "loja" },
-{ "{#APP}": "galeria", "{#ENV}": "prod", "{#DOMAIN}": "galeria.socioambiental.org", "{#HOST}": "galeria" },
-{ "{#APP}": "conexoes", "{#ENV}": "prod", "{#DOMAIN}": "conexoes.socioambiental.org", "{#HOST}": "conexoes" },
-{ "{#APP}": "mapa", "{#ENV}": "prod", "{#DOMAIN}": "mapa.socioambiental.org", "{#HOST}": "mapa" },
-{ "{#APP}": "odk", "{#ENV}": "prod", "{#DOMAIN}": "odk.socioambiental.org", "{#HOST}": "odk" },
-{ "{#APP}": "widgets", "{#ENV}": "prod", "{#DOMAIN}": "widgets.socioambiental.org", "{#HOST}": "widgets" },
-{ "{#APP}": "www", "{#ENV}": "prod", "{#DOMAIN}": "raisg.org", "{#HOST}": "www" }] }
+{
+    "data": [
+        {
+            "{#APP}": "www",
+            "{#ENV}": "prod",
+            "{#DOMAIN}": "socioambiental.org",
+            "{#HOST}": "www"
+        },
+        {
+            "{#APP}": "pib",
+            "{#ENV}": "prod",
+            "{#DOMAIN}": "socioambiental.org",
+            "{#HOST}": "pib"
+        },
+        {
+            "{#APP}": "ti",
+            "{#ENV}": "prod",
+            "{#DOMAIN}": "ti.socioambiental.org",
+            "{#HOST}": "ti"
+        },
+        {
+            "{#APP}": "uc",
+            "{#ENV}": "prod",
+            "{#DOMAIN}": "uc.socioambiental.org",
+            "{#HOST}": "uc"
+        },
+        {
+            "{#APP}": "mirim",
+            "{#ENV}": "prod",
+            "{#DOMAIN}": "mirim.socioambiental.org",
+            "{#HOST}": "mirim"
+        },
+        {
+            "{#APP}": "apoie",
+            "{#ENV}": "prod",
+            "{#DOMAIN}": "apoie.socioambiental.org",
+            "{#HOST}": "apoie"
+        },
+        {
+            "{#APP}": "acervo",
+            "{#ENV}": "prod",
+            "{#DOMAIN}": "acervo.socioambiental.org",
+            "{#HOST}": "acervo"
+        },
+        {
+            "{#APP}": "sisarp",
+            "{#ENV}": "prod",
+            "{#DOMAIN}": "sisarp.socioambiental.org",
+            "{#HOST}": "sisarp"
+        },
+        {
+            "{#APP}": "sisarp-v2",
+            "{#ENV}": "prod",
+            "{#DOMAIN}": "sisarp-v2.socioambiental.org",
+            "{#HOST}": "sisarp-v2"
+        },
+        {
+            "{#APP}": "loja",
+            "{#ENV}": "prod",
+            "{#DOMAIN}": "loja.socioambiental.org",
+            "{#HOST}": "loja"
+        },
+        {
+            "{#APP}": "galeria",
+            "{#ENV}": "prod",
+            "{#DOMAIN}": "galeria.socioambiental.org",
+            "{#HOST}": "galeria"
+        },
+        {
+            "{#APP}": "conexoes",
+            "{#ENV}": "prod",
+            "{#DOMAIN}": "conexoes.socioambiental.org",
+            "{#HOST}": "conexoes"
+        },
+        {
+            "{#APP}": "mapa",
+            "{#ENV}": "prod",
+            "{#DOMAIN}": "mapa.socioambiental.org",
+            "{#HOST}": "mapa"
+        },
+        {
+            "{#APP}": "odk",
+            "{#ENV}": "prod",
+            "{#DOMAIN}": "odk.socioambiental.org",
+            "{#HOST}": "odk"
+        },
+        {
+            "{#APP}": "widgets",
+            "{#ENV}": "prod",
+            "{#DOMAIN}": "widgets.socioambiental.org",
+            "{#HOST}": "widgets"
+        },
+        {
+            "{#APP}": "www",
+            "{#ENV}": "prod",
+            "{#DOMAIN}": "raisg.org",
+            "{#HOST}": "www"
+        }
+    ]
+}
