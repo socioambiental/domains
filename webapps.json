@@ -16,4 +16,7 @@
 { "{#APP}": "widgets", "{#ENV}": "prod", "{#DOMAIN}": "socioambiental.org", "{#HOST}": "widgets" },
 { "{#APP}": "apiadmin", "{#ENV}": "prod", "{#DOMAIN}": "socioambiental.org", "{#HOST}": "apiadmin" },
 { "{#APP}": "site-antigo", "{#ENV}": "prod", "{#DOMAIN}": "socioambiental.org", "{#HOST}": "site-antigo" },
-{ "{#APP}": "www", "{#ENV}": "prod", "{#DOMAIN}": "raisg.org", "{#HOST}": "www" }] }
+{ "{#APP}": "www", "{#ENV}": "prod", "{#DOMAIN}": "raisg.org", "{#HOST}": "www" },
+{ "{#APP}": "www", "{#ENV}": "prod", "{#DOMAIN}": "redario.org.br", "{#HOST}": "www" },
+{ "{#APP}": "www", "{#ENV}": "prod", "{#DOMAIN}": "xingumais.org", "{#HOST}": "www" },
+{ "{#APP}": "www", "{#ENV}": "prod", "{#DOMAIN}": "sementesdoxingu.org.br", "{#HOST}": "www" }] }
