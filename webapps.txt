@@ -16,4 +16,7 @@ widgets,socioambiental.org,0
 apiadmin,socioambiental.org,0
 site-antigo,socioambiental.org,0
 www,raisg.org,0
+www,sementesdoxingu.org.br,0
+www,xingumais.org,0
+www,redario.org.br,0
 
